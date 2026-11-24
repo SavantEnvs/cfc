@@ -1,0 +1,11 @@
+project: savantenvs/cfc
+target: fuzz_fountain
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fountain/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_fountain
+    libfuzzer: true
+    timeout: 10
